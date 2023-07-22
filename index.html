@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Weather Application</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="card">
+      
+      <div class="card-body">
+        <h5 class="card-title">Search</h5>
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="Search..." id="press-placeholder">
+          <div class="input-group-append">
+            <button class="btn btn-outline-secondary" type="button" id="cancel-btn">cancel</button>
+            <button class="btn btn-primary" type="button" onclick="search()" id="search-btn">Go</button>
+          </div>
+        </div>
+        <h1 class="my-4 text-center">Weather for <span class="name"></span></h1>
+        <main>
+          <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+            <div class="col">
+              <div class="card mb-4 rounded-3 shadow-sm">
+                <div class="card-header py-3">
+                  <h4 class="my-0 fw-normal">Temperatures</h4>
+                </div>
+                <div class="card-body">
+                  <h1 class="card-title pricing-card-title"><span class="temp1"></span><small class="text-body-secondary fw-light"></small></h1>
+                  <ul class="list-unstyled mt-3 mb-4">
+                    <li>Temperature is <span class="temp"></span></li>
+                    <li>Minimum Temperature is <span class="temp_min"></span></li>
+                    <li>Maximum Temperature is <span class="temp_max"></span></li>
+                    
+                  </ul>
+                  
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card mb-4 rounded-3 shadow-sm">
+                <div class="card-header py-3">
+                  <h4 class="my-0 fw-normal">Cloud</h4>
+                </div>
+                <div class="card-body">
+                  <h1 class="card-title pricing-card-title"><span class="humidity1"></span><small class="text-body-secondary fw-light"></small></h1>
+                  <ul class="list-unstyled mt-3 mb-4">
+                    <li>Feels Like <span class="feels_like"></span></li>
+                    <li>Humidity is <span class="humidity"></span></li>
+                    <li>Pressure is <span class="pressure"></span></li>
+                    <li></li>
+                  </ul>
+                  
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card mb-4 rounded-3 shadow-sm border-primary">
+                <div class="card-header py-3 text-bg-primary border-primary">
+                  <h4 class="my-0 fw-normal">Sunrise</h4>
+                </div>
+                <div class="card-body">
+                  <h1 class="card-title pricing-card-title"><span class="sunrise1"><small class="text-body-secondary fw-light"></small></h1>
+                  <ul class="list-unstyled mt-3 mb-4">
+                    <li>Sunrise is <span class="sunrise"></span></li>
+                    <li>Sunset is <span class="sunset"></span></li>
+                    <li>Wind speed is <span class="speed"></span></li>
+                  </ul>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+      
+          <h2 class="display-6 text-center mb-4">Weather of other common places</h2>
+      
+          <div class="table-responsive">
+            <table class="table text-center">
+              <thead>
+                <tr>
+                  <th style="width: 34%;"></th>
+                  <th style="width: 22%;">Feels_like</th>
+                  <th style="width: 22%;">Humidity</th>
+                  <th style="width: 22%;">Pressure</th>
+                  <th style="width: 22%;">Temp</th>
+                  <th style="width: 22%;">Temp_max</th>
+                  <th style="width: 22%;">Temp_min</th>
+                  <th style="width: 22%;">Sunrise</th>
+                  <th style="width: 22%;">Sunset</th>
+                  <th style="width: 22%;">Speed</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row" class="text-start">Kolkata</th>
+                  <td>2</td>
+                  <td>2</td>
+                  <td>2</td>
+                  <td>2</td>
+                  <td>2</td>
+                  <td>2</td>
+                  <td>2</td>
+                  <td>2</td>
+                  <td>2</td>
+                </tr>
+                <tr>
+                  <th scope="row" class="text-start">Bangalore</th>
+                  <td>2</td>
+                  <td>2</td>
+                  <td>2</td>
+                  <td>2</td>
+                  <td>2</td>
+                  <td>2</td>
+                  <td>2</td>
+                  <td>2</td>
+                  <td>2</td>
+                </tr>
+              </tbody>
+      
+              <tbody>
+                <tr>
+                  <th scope="row" class="text-start">Chennai</th>
+                  <td>2</td>
+                  <td>2</td>
+                  <td>2</td>
+                  <td>2</td>
+                  <td>2</td>
+                  <td>2</td>
+                  <td>2</td>
+                  <td>2</td>
+                  <td>2</td>
+                </tr>
+                <tr>
+                  <th scope="row" class="text-start">Hyderabad</th>
+                  <td>2</td>
+                  <td>2</td>
+                  <td>2</td>
+                  <td>2</td>
+                  <td>2</td>
+                  <td>2</td>
+                  <td>2</td>
+                  <td>2</td>
+                  <td>2</td>
+                </tr>
+                <tr>
+                  <th scope="row" class="text-start">Delhi</th>
+                  <td>2</td>
+                  <td>2</td>
+                  <td>2</td>
+                  <td>2</td>
+                  <td>2</td>
+                  <td>2</td>
+                  <td>2</td>
+                  <td>2</td>
+                  <td>2</td>
+                </tr>
+                <tr>
+                  <th scope="row" class="text-start">Shanghai</th>
+                  <td>2</td>
+                  <td>2</td>
+                  <td>2</td>
+                  <td>2</td>
+                  <td>2</td>
+                  <td>2</td>
+                  <td>2</td>
+                  <td>2</td>
+                  <td>2</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </main>
+      </div>
+    </div>  
+    
+      
+
+      
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
